@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+<title>MindArc Digital Agency | Exercise 2</title>
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.mindarc.com.au/wp-content/themes/mindarc-divi/favicon-32x32.png?v=2bQmXBpw0lD">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.mindarc.com.au/wp-content/themes/mindarc-divi/favicon-16x16.png?v=2bQmXBpw0lD">
+<link rel="icon" href="https://www.mindarc.com.au/wp-content/themes/mindarc-divi/favicon.ico?v=2bQmXBpw0lD"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+<link rel="stylesheet/less" type="text/css" href="style.less" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="main.js"></script>
+</head>
+<body>
+	<section>
+		<div class="inner-container">
+			<div id="myData">	
+				<div id="brens-tab" class="tab"></div>	
+				<div id="brens-content"></div>
+				<div id="brens-accordion"></div>
+				<div class="clear"></div>	
+			</div>	
+		</div>	
+	</section>	
+</body>
+<script type="text/javascript">
+	
+var tabContainer = document.getElementById("brens-tab"); 
+var tabContent = document.getElementById("brens-content"); 
+var accordionContent = document.getElementById("brens-accordion"); 
+
+(function (window, document, undefined) {
+	'use strict';
+	    
+	// Initialize the media query
+	var mediaQuery = window.matchMedia('(max-width: 767px)'); 
+	
+	// Add a listen event
+	mediaQuery.addListener(doSomething);  
+	
+	// Function to do something with the media query
+	function doSomething(mediaQuery) {    
+    if (mediaQuery.matches) {
+    	tabContainer.style.display = "none";
+    	tabContent.style.display = "none";
+    	accordionContent.style.display = "block";
+    } else {
+    	tabContainer.style.display = "block";
+    	tabContent.style.display = "block";
+    	accordionContent.style.display = "none";
+    }
+} 
+	// On load
+	doSomething(mediaQuery);
+})(window, document);
+
+</script>
+</html>
